@@ -20,6 +20,13 @@ public class Customer extends Person {
 			String ssn) {
 		super(firstName, middleName, lastName, ssn);
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Customer compareTo = (Customer)obj;
+		
+		return customerID.equalsIgnoreCase(compareTo.getCustomerID());
+	}
 
 	@Override
 	public String toString() {
