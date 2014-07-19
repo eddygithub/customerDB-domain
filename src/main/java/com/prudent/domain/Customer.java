@@ -7,13 +7,25 @@ public class Customer extends Person {
 
 	@Id
 	public String customerID;
-
+	
+	//user is the userId who is responsible for this customer
+	//this value can be null for customer who is not serve by anyone at this point
+	public Long userID;
+	
 	public void setCustomerID(String customerID) {
 		this.customerID = customerID;
 	}
 
 	public String getCustomerID() {
 		return customerID;
+	}
+
+	public Long getUserID() {
+		return userID;
+	}
+
+	public void setUserID(Long userID) {
+		this.userID = userID;
 	}
 
 	public Customer(String firstName, String middleName, String lastName,
